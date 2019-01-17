@@ -6,5 +6,13 @@ from sqlalchemy import create_engine
 Base = declarative_base()
 
 # Write your classes here :
-class Product(Base):
-    pass
+class Workplaces(Base):
+	__tablename__= "workplaces"
+	id = Column(Integer,primary_key= True)
+	name = Column(String)
+	agelimit = Column(Integer)
+	location = Column(String)
+	phonenumber = Column(Integer)
+	description = Column(String)
+
+ 
