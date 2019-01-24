@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request,redirect,url_for
 from database import *
 app = Flask(__name__)
 
@@ -12,7 +12,9 @@ def homepage():
 
 @app.route('/see_jobs')
 def see_jobs():
-    return render_template("see_jobs.html")
+    workplaces = get_all_workplaces()
+    return render_template("see_jobs.html", workplaces=workplaces)
+
 
 
 
@@ -32,7 +34,7 @@ def add_a_job():
 
         save_to_database(name,age,location,phone,description)        
         print("go to see jobs")
-        return redirect('see_jobs')
+        return redirect(url_for('see_jobs'))
            
 
 
