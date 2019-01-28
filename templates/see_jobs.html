@@ -11,6 +11,7 @@ body {
   width: 300px;
   height: 300px;
   perspective: 1000px;
+  text-align:center;
 }
 
 .flip-card-inner {
@@ -35,13 +36,13 @@ body {
 }
 
 .flip-card-front {
-  background-color: #bbb;
+  background-color: #ddff99;
   color: black;
   z-index: 2;
 }
 
 .flip-card-back {
-  background-color: #2980b9;
+  background-color: #ccff66;
   color: white;
   transform: rotateY(180deg);
   z-index: 1;
@@ -50,7 +51,8 @@ body {
 	
 </head>
    <body>
-   <div style="margin:auto">	
+   <div style="margin:auto" class="L1">
+
    	<h1>Look for the right work for you</h1>
    </div>
 
@@ -77,7 +79,11 @@ body {
    
    		
    	{% endfor%}
-
+<style>
+	
+	.L1{font: 20px arial,sans-serif;
+   			text-align:center;}
+</style>
 
    
 
